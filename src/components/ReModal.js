@@ -21,7 +21,7 @@ class ReModal extends Component {
   handleChange = (event) => {
     const {
       target: { name, value },
-    } = event; //ºñ±¸Á¶È­ ÇÒ´ç(name°ú value, key°¡ »ý·«ÀÌ µÈ °ÍÀÓ)
+    } = event; //ï¿½ï¿½ï¿½ï¿½È­ ï¿½Ò´ï¿½(nameï¿½ï¿½ value, keyï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
     this.setState({ [name]: value });
   };
   handleUpdate = (event) => {
@@ -53,17 +53,17 @@ class ReModal extends Component {
 
     return (
       <React.Fragment>
-        {reOpen ? ( //ÂüÀÏ¶§ ¾Æ·¡ ÄÚµå ½ÇÇà!
+        {reOpen ? ( //ï¿½ï¿½ï¿½Ï¶ï¿½ ï¿½Æ·ï¿½ ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½!
           <React.Fragment>
             <div className="Modal-verlay" onClick={reclose} />
             <div className="Modal">
-              <h1 className="title">¸Þ¸ð¸¦ ±â·ÏÇÏ¼¼¿ä!</h1>
+              <h1 className="title">ë©”ëª¨ë¥¼ ìˆ˜ì •í•˜ì„¸ìš”!</h1>
               <form onSubmit={this.handleUpdate}>
                 <div className="content">
                   <h4>
                     <input
                       type="text"
-                      placeholder="¾ÆÀÌµð¸¦ ÀÔ·ÂÇÏ¼¼¿ä."
+                      placeholder="ì•„ì´ë””ë¥¼ ìž…ë ¥í•˜ì„¸ìš”."
                       name="author"
                       value={this.state.author}
                       onChange={this.handleChange}
@@ -73,7 +73,7 @@ class ReModal extends Component {
                   <h4>
                     <input
                       type="text"
-                      placeholder="Á¦¸ñÀ» ÀÔ·ÂÇÏ¼¼¿ä."
+                      placeholder="ì œëª©ì„ ìž…ë ¥í•˜ì„¸ìš”."
                       name="title"
                       value={this.state.title}
                       onChange={this.handleChange}
@@ -88,12 +88,12 @@ class ReModal extends Component {
                 <div className="button-wrap">
                   <button type="submit">
                     <p>
-                      <strong>¼öÁ¤ÇÏ±â</strong>
+                      <strong>ìˆ˜ì •í•˜ê¸°</strong>
                     </p>
                   </button>
                   <button type="button" onClick={this.handleRemove}>
                     <p>
-                      <strong>»èÁ¦ÇÏ±â</strong>
+                      <strong>ì‚­ì œí•˜ê¸°</strong>
                     </p>
                   </button>
                 </div>
